@@ -29,6 +29,12 @@
     --zelda-content-font-size: calc(18px*var(--scaling-factor));
 }
 
+p, li {
+    opacity: 87%;
+    text-shadow: 0px 0px .2em black;
+    line-height: calc(1.3rem * var(--scaling-factor));
+    font-size: medium;
+}
 
 @font-face {
     font-family: "Chiaro";
@@ -38,6 +44,31 @@
 h1 {
     color:white;
     text-shadow: 0px 0px 0.1em;
+}
+
+h2 {
+    color:white;
+    text-shadow: 0px 0px 0.1em;
+}
+
+h3:not(:first-child), h4:not(:first-child) {
+    margin-top: 2rem;
+}
+
+h3 {
+    color:white;
+    border-bottom: 1px solid white;
+    font-size:x-large;
+}
+
+h4 {
+    color:white;
+    border-bottom: 1px solid white;
+    font-size:large;
+}
+
+code {
+    color: inherit;
 }
 
 /* updated in bg.js */
@@ -109,6 +140,7 @@ a:hover
         var(--zelda-bg-hilite) 80%,
         var(--zelda-bg)
     );
+    margin-bottom: calc(2rem * var(--scaling-factor) );
 }
 
 .zelda-file-box-slot {
@@ -173,35 +205,23 @@ a:hover
 .content-container {
     width: 100%;
     margin: calc(30px*var(--scaling-factor)) auto;
-    /*
-    border: calc(1px*var(--scaling-factor)) solid red;
-    */
 }
 
 @media only screen and (min-width: 700px) {
 	.content-container {
 		width: 80%;
         margin: 0 auto;
-        /*
-        border: calc(1px*var(--scaling-factor)) solid blue;
-        */
 	}
 }
 @media only screen and (min-width: 1000px) {
 	.content-container {
 		width: 60%;
         margin: 0 auto;
-        /*
-        border: calc(1px*var(--scaling-factor)) solid red;
-        */
 	}
 }
 @media only screen and (min-width: 1400px) {
 	.content-container {
 		width: 40%;
         margin: 0 auto;
-        /*
-        border: calc(1px*var(--scaling-factor)) solid blue;
-        */
 	}
 }

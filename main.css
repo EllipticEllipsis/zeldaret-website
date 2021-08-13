@@ -29,13 +29,6 @@
     --zelda-content-font-size: calc(18px*var(--scaling-factor));
 }
 
-p, li {
-    opacity: 87%;
-    text-shadow: 0px 0px .2em black;
-    line-height: calc(1.3rem * var(--scaling-factor));
-    font-size: medium;
-}
-
 @font-face {
     font-family: "Chiaro";
     src: url("FOT-ChiaroStd-B.otf");
@@ -49,26 +42,6 @@ h1 {
 h2 {
     color:white;
     text-shadow: 0px 0px 0.1em;
-}
-
-h3:not(:first-child), h4:not(:first-child) {
-    margin-top: 2rem;
-}
-
-h3 {
-    color:white;
-    border-bottom: 1px solid white;
-    font-size:x-large;
-}
-
-h4 {
-    color:white;
-    border-bottom: 1px solid white;
-    font-size:large;
-}
-
-code {
-    color: inherit;
 }
 
 /* updated in bg.js */

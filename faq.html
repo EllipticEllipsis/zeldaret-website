@@ -13,7 +13,7 @@
 <body>
     <div>
         <div class="container text-center" style="margin-top: 50px;">
-            <img src="img/logo.png" style="width: 200px; height: 200px" />
+            <a href="index.html"><img src="img/logo.png" style="width: 200px; height: 200px" /></a>
         </div>
 
         <h1 class="text-center" style="margin-top: 10px;">Zelda 64 Reverse Engineering</h1>
@@ -42,11 +42,11 @@
                         <li><a href="#will-there-be-a-pc-port-of-ocarina-of-timemajoras-mask">Will there be a PC port of Ocarina of Time/Majora's Mask?</a></li>
                         <li><a href="#does-decomp-run-on-console">Does decomp run on console?</a></li>
                         <li><a href="#what-language-was-ocarina-of-timemajoras-mask-written-in">What language was Ocarina of Time/Majora's Mask written in?</a></li>
-                        <li><a href="#how-do-i-set-up-the-decompilation-on-my-computer">How do I set up the decompilation on my computer?</a></li>
                         <li><a href="#what-decompiler-is-being-used">What decompiler is being used?</a></li>
                         <li><a href="#who-can-contribute-what-do-i-need-to-know">Who can contribute? What do I need to know?</a><ul>
-                        <li><a href="#is-any-use-being-made-of-leaked-materials">Is any use being made of leaked materials?</a></li>
+                            <li><a href="#is-any-use-being-made-of-leaked-materials">Is any use being made of leaked materials?</a></li>
                         </ul></li>
+                        <li><a href="#how-do-i-set-up-the-decompilation-on-my-computer">How do I set up the decompilation on my computer?</a></li>
                         <li><a href="#why-does-the-progress-graph-move-so-inconsistently">Why does the progress graph move so inconsistently?</a></li>
                         <li><a href="#when-will-the-project-be-finished-how-long-will-a-pc-port-take">When will the project be finished? How long will a PC Port take?</a></li>
                         <li><a href="#where-can-i-get-more-information">Where can I get more information?</a><ul>
@@ -54,16 +54,16 @@
                         </ul></li>
                         </ul></li>
                         <li><a href="#specific-to-ocarina-of-time">Specific to Ocarina of Time</a><ul>
-                        <li><a href="#is-ocarina-of-time-more-optimised-than-super-mario-64">Is Ocarina of Time more optimised than Super Mario 64?</a></li>
-                        <li><a href="#which-versions-will-be-decompiled">Which versions will be decompiled?</a></li>
-                        <li><a href="#why-start-with-the-pal-master-quest-debug-version">Why start with the PAL Master Quest Debug version?</a></li>
+                            <li><a href="#which-versions-will-be-decompiled">Which versions will be decompiled?</a></li>
+                            <li><a href="#why-start-with-the-pal-master-quest-debug-version">Why start with the PAL Master Quest Debug version?</a></li>
+                            <li><a href="#is-ocarina-of-time-more-optimised-than-super-mario-64">Is Ocarina of Time more optimised than Super Mario 64?</a></li>
                         <li><a href="#how-can-i-help">How can I help?</a></li>
                         </ul></li>
                         <li><a href="#specific-to-majoras-mask">Specific to Majora's Mask</a><ul>
                         <li><a href="#how-similar-is-majoras-mask-to-ocarina-of-time-can-code-be-copypasted-between-the-two">How similar is Majora's Mask to Ocarina of Time? Can code be copypasted between the two?</a></li>
-                        <li><a href="#why-is-majoras-mask-harder-to-match-than-ocarina-of-time">Why is Majora's Mask harder to match than Ocarina of Time?</a></li>
                         <li><a href="#why-is-majoras-mask-so-far-behind-ocarina-of-time">Why is Majora's Mask so far behind Ocarina of Time?</a></li>
                         <li><a href="#are-oot-and-mm-using-the-same-decompilation-method">Are OoT and MM using the same decompilation method?</a></li>
+                        <li><a href="#why-is-majoras-mask-harder-to-match-than-ocarina-of-time">Why is Majora's Mask harder to match than Ocarina of Time?</a></li>
                         <li><a href="#why-is-there-no-assembly-code-in-mms-repo-what-is-transient-asm">Why is there no assembly code in MM's repo? What is transient ASM?</a></li>
                         </ul></li>
                         </ul>
@@ -88,32 +88,24 @@
                     <h3 id="what-is-decompilation-what-is-matching-decompilation">What is Decompilation? What is matching decompilation?</h3>
                     <p>Decompilation is a type of reverse engineering: analysing the compiled binary data that is on the cartridge to produce human-readable code that has the same result. <em>Matching</em> decompilation is more specific: instead of merely functionally equivalent code, it aims to produce code that compiles to <em>exactly</em> the same data as the original.</p>
                     <h3 id="what-is-the-point-of-this-project-what-will-i-be-able-to-do-with-decomp-when-it-is-finished">What is the point of this project? What will I be able to do with decomp when it is finished?</h3>
-                    <p>The aim is to produce a complete documented codebase of every version of the game in its original language (C), before it is compiled into assembly, as has been done in the past for various Pokemon games and Super Mario 64. This codebase can be used for various purposes:</p>
+                    <p>The aim is to produce a complete documented codebase of every version of the game in its original language (C), before it is compiled into assembly, as has been done in the past for various Pokemon games and Super Mario 64. This codebase can be used for various purposes, which can be divided into two main categories:</p>
                     <ul>
-                        <li>General knowledge about the game</li>
-                        <li>Which can be used for speedrunning</li>
-                        <li>Modding, with no need to learn assembly</li>
-                        <li>Any other project that wishes to repurpose the code.</li>
+                        <li>General knowledge about the game and all its systems, for analysis and glitchhunting (speedrunning has already taken extensive advantage of these aspects, for example).</li>
+                        <li>Modding, with no need to learn assembly, or any other project that wishes to repurpose or change the code (including, but not limited to, randomizers and porting to other hardware).</li>
                     </ul>
                     <h3 id="what-language-was-ocarina-of-timemajoras-mask-written-in">What language was Ocarina of Time/Majora's Mask written in?</h3>
                     <p>They are both written in <a href="https://en.wikipedia.org/wiki/C_(programming_language)">the programming language C</a>, which is compiled to <a href="https://en.wikipedia.org/wiki/MIPS_architecture">MIPS assembly language</a>, which transliterates precisely into the raw bytes of machine code/data that are on the cartridge.</p>
                     <h3 id="does-decomp-run-on-console">Does decomp run on console?</h3>
-                    <p>The romfile that the decompilation project compiles is identical to the original ROM (that's what <em>matching</em> means). Therefore it runs wherever that romfile will. (Since Ocarina of Time currently only targets the Master Quest debug ROM, it requires the Expansion Pak to run on Nintendo 64, because the debug ROM itself needs the extra 4 MB for debugging features).</p>
+                    <p>The romfile that one of our decompilation projects compiles is identical to the original ROM (that's what <em>matching</em> means). Therefore it runs wherever that romfile will. (Since currently the Ocarina of Time project is only working on the Master Quest debug ROM, it requires the Expansion Pak to run on Nintendo 64, because the debug ROM itself needs the extra 4 MB for debugging features; it also needs to be compressed to work well if injected into the Virtual Console emulator).</p>
                     <h3 id="will-there-be-a-pc-port-of-ocarina-of-timemajoras-mask">Will there be a PC port of Ocarina of Time/Majora's Mask?</h3>
                     <p>Porting to other platforms will be possible as a result of the work that these projects are carrying out. However, a PC Port is <em>not</em> in the scope of this project: <em>we are not making a PC Port</em>, but someone else will be able to.</p>
-                    <h3 id="how-do-i-set-up-the-decompilation-on-my-computer">How do I set up the decompilation on my computer?</h3>
-                    <p>See the instructions in the appropriate README.md:</p>
-                    <ul>
-                        <li><a href="https://github.com/zeldaret/oot/#readme">Ocarina of Time</a></li>
-                        <li><a href="https://github.com/zeldaret/mm/#readme">Majora's Mask</a></li>
-                    </ul>
                     <h3 id="what-decompiler-is-being-used">What decompiler is being used?</h3>
                     <p>We mostly use a custom-built decompiler called <a href="https://github.com/matt-kempster/mips_to_c">mips_to_c</a>. Occasionally some people have found Ghidra helpful, but for matching decompilation of MIPS, custom tools for the job have proven much more capable.</p>
                     <h3 id="who-can-contribute-what-do-i-need-to-know">Who can contribute? What do I need to know?</h3>
                     <p>Anyone with a decent knowledge of how the games work can contribute usefully in some way or other if they learn the basics of C.</p>
                     <ul>
                         <li>To work with the decompiled code in a nontrivial way you need to know C (you can learn enough C to read the code in a week, so it's not a major time investment).</li>
-                        <li>Code decompilation itself requires a good knowledge of C, particularly structs and pointers, but C has a sufficiently small vocabulary and grammar that these can be acquired quickly. MIPS assembly knowledge is not actually necessary to start learning to decompile, but you will pick it up relatively quickly too.</li>
+                        <li>Code decompilation itself requires a good knowledge of C, particularly structs and pointers, but C has a sufficiently small vocabulary and grammar that these can be acquired quickly. MIPS assembly knowledge is not actually necessary to start learning to decompile: you can pick it up relatively quickly. (MIPS is a relatively easy assembly language to understand: it is often used in first courses in computer science.)</li>
                         <li>To work with asset files, you need to be able to use the repository and build the ROM, and know some xml and C, but we now have plenty of useful tools (especially <a href="https://github.com/Random06457/Z64Utils">Z64Utils</a>) that make understanding how asset files are structured relatively simple.</li>
                         <li>Documentation requires good knowledge of C, but much moreso than the other areas an understanding of how the game works.</li>
                         <li>To contribute to the repository and organise your work with proper version control, you need to know the basics of git, and how to use it with GitHub.</li>
@@ -121,8 +113,14 @@
                     <p>There is one exception:</p>
                     <h4 id="is-any-use-being-made-of-leaked-materials">Is any use being made of leaked materials?</h4>
                     <p>No. <em>No one is allowed to contribute to the project who has accessed material relating to relevant source code or documentation leaks.</em> For specifics, see <a href="http://discord.zelda64.dev/">the Discord server</a>.</p>
+                    <h3 id="how-do-i-set-up-the-decompilation-on-my-computer">How do I set up the decompilation on my computer?</h3>
+                    <p>See the instructions in the appropriate README.md:</p>
+                    <ul>
+                        <li><a href="https://github.com/zeldaret/oot/#readme">Ocarina of Time</a></li>
+                        <li><a href="https://github.com/zeldaret/mm/#readme">Majora's Mask</a></li>
+                    </ul>
                     <h3 id="why-does-the-progress-graph-move-so-inconsistently">Why does the progress graph move so inconsistently?</h3>
-                    <p>Firstly, on any project like this, the beginning is slow as the methods and techniques are created and understanding of anything requires a lot of analysis of all factors involved. The middle period is fastest, as techniques are refined, more people join, and can learn more quickly from established understanding. Ocarina of Time is now in the final stages of decompilation: a lot of the files left are taking a long time because they are hard to decompile.</p>
+                    <p>Firstly, on any project like this, the beginning is slow as the methods and techniques are created and understanding of anything requires a lot of analysis of all factors involved. The middle period is fastest, as techniques are refined, more people join, and they can learn more quickly from established understanding. Ocarina of Time is now in the final stages of decompilation: a lot of the files left are taking a long time because they are hard to decompile.</p>
                     <p>Secondly, the graph does not take into account</p>
                     <ul>
                         <li>Code decompiled on people's GitHub forks that is currently being documented or cleaned up.</li>
@@ -133,7 +131,7 @@
                     <p>Lastly, people are doing this in their spare time, so when they don't have spare time, they aren't able to contribute.</p>
                     <h3 id="when-will-the-project-be-finished-how-long-will-a-pc-port-take">When will the project be finished? How long will a PC Port take?</h3>
                     <p>This is being done by people in their spare time, so we do not have a specific deadline in mind. The best way to keep track of the overall progress is <a href="progress.html">the progress page</a> (but see previous question): you can <a href="http://discord.zelda64.dev/">ask in Discord</a> if you would like more specific information.</p>
-                    <p>As was said above, <strong>we are not making a PC Port</strong>. However, Ocarina of Time and Majora's Mask are considerably more complicated than Super Mario 64, so even when the project is in a useable state, it will be a while before a PC Port is ready.</p>
+                    <p>As was said above, <strong>we are not making a PC Port</strong>. However, Ocarina of Time and Majora's Mask are considerably more complicated than Super Mario 64, so even when the project is in a useable state, it will be a while before a PC Port is ready, if and when someone else starts working on making one.</p>
                     <h3 id="where-can-i-get-more-information">Where can I get more information?</h3>
                     <p>For more information on any of the topics in the scope of this project that have been discussed here, please join <a href="http://discord.zelda64.dev/">the Discord</a>. We aim to be helpful and friendly to newcomers, provided they have read the basics in this FAQ.</p>
                     <h4 id="i-would-like-to-write-an-article-or-make-a-video-about-this-project-who-should-i-contact-for-further-information">I would like to write an article or make a video about this project. Who should I contact for further information?</h4>
@@ -153,17 +151,17 @@
                     <div class="zelda-box zelda-file-box-hack_right"></div>
                 </div>
                 <div class="zelda-file-box-main zelda-box">
-                    <h3 id="is-ocarina-of-time-more-optimised-than-super-mario-64">Is Ocarina of Time more optimised than Super Mario 64?</h3>
-                    <p>Yes, the debug ROM that we are using has the standard <code>-O2</code> optimisation flags for most files (some of the low-level Nintendo 64 system files are compiled with other flags). This means that the entire game has been approximately as difficult to decompile as the last part of Super Mario 64 that was completed, namely the audio, although we have benefited greatly from the prior experience of Super Mario 64 decomp, as well as our custom decompiler <code>mips_to_c</code>.</p>
                     <h3 id="which-versions-will-be-decompiled">Which versions will be decompiled?</h3>
                     <p>It is intended to eventually support every version we have available: N64/GC, NTSC/PAL, etc.</p>
                     <h3 id="why-start-with-the-pal-master-quest-debug-version">Why start with the PAL Master Quest Debug version?</h3>
                     <p>Before the project began, this version of the game had the most information available: most romhacks have used it as a base, and it includes certain data ("debug strings") that help with identification of some of the purposes of functions and variables. It also appears to be slightly easier to match due to being compiled with slightly different flags from retail versions.</p>
+                    <h3 id="is-ocarina-of-time-more-optimised-than-super-mario-64">Is Ocarina of Time more optimised than Super Mario 64?</h3>
+                    <p>Yes, the debug ROM that we are using has the standard <code>-O2</code> optimisation flags for most files (some of the low-level Nintendo 64 system files are compiled with other flags). This means that the entire game has been approximately as difficult to decompile as the last part of Super Mario 64 that was completed, namely the audio, although we have benefited greatly from the prior experience of Super Mario 64 decomp, as well as our custom decompiler <code>mips_to_c</code>.</p>
                     <h3 id="how-can-i-help">How can I help?</h3>
                     <ul>
                         <li>Currently Ocarina of Time is close to finishing code, so there is no code available to work on decompiling.</li>
                         <li>Object decompilation is analysis and identification of the content of the asset files used in code (textures, 3D models, animations, collision data, etc.). There is plenty of this still to do.</li>
-                        <li>If you want to do code decompilation now, Majora's Mask is similar to Ocarina o Time, but a bit more difficult. It has plenty of simple actor files available that are suitable for beginners.</li>
+                        <li>If you want to do code decompilation now, Majora's Mask is similar to Ocarina f Time, but a bit more difficult. It has plenty of simple actor files available that are suitable for beginners.</li>
                     </ul>
                 </div>
             </div>
@@ -182,12 +180,12 @@
                 <div class="zelda-file-box-main zelda-box">
                     <h3 id="how-similar-is-majoras-mask-to-ocarina-of-time-can-code-be-copypasted-between-the-two">How similar is Majora's Mask to Ocarina of Time? Can code be copypasted between the two?</h3>
                     <p>Some things are very similar: both use the same coding styles, share some code, some of the asset files are identical (only about 10% of the files are the exactly the same, though). However, other parts are very different, an obvious example being Link's multiple forms, but there are less obvious differences as well, such as use of animated textures containing framedata instead of animating textures directly with code, much more prevelent use of load-on-demand, and more that we will discover in due course. So far there have also been a surprisingly large number of changes from Ocarina of Time files that you would expect to just transfer (Keese in MM are quite different from their Ocarina of Time versions, for example).</p>
-                    <h3 id="why-is-majoras-mask-harder-to-match-than-ocarina-of-time">Why is Majora's Mask harder to match than Ocarina of Time?</h3>
-                    <p>Majora's Mask is compiled with <code>-O2 -g3</code>. <code>-g3</code> is a debugging flag that includes far more debugging information than just <code>-O2</code>, but also changes how the compiled code looks. <code>-g3</code> is also more sensitive to the scope in which variables are declared, so it is harder to produce matching code; Ocarina of Time debug is more flexible here. However, retail versions of Ocarina of Time are also compiled with <code>-O2 -g3</code>, so it too will have this problem when that project moves to supporting retail versions.</p>
                     <h3 id="why-is-majoras-mask-so-far-behind-ocarina-of-time">Why is Majora's Mask so far behind Ocarina of Time?</h3>
                     <p>It was decided by the Majora's Mask project leads to concentrate on Ocarina of Time first, with the expectation that a lot of Ocarina of Time code could be used to help, directly or indirectly, with Majora's Mask decompilation, and this has proven to be the case so far! But recently, knowledge from Majora's Mask has also been helping with matching stubborn functions in Ocarina of Time.</p>
                     <h3 id="are-oot-and-mm-using-the-same-decompilation-method">Are Ocarina of Time and Majora's Mask using the same decompilation method?</h3>
                     <p>Broadly yes: both games are sufficiently similar that the same method can be used for compiling the files. However, Ocarina of Time keeps the remaining undecompiled assembly code in the main repository, while Majora's Mask uses transient assembly, which makes the extraction and disassembly process more complicated.</p>
+                    <h3 id="why-is-majoras-mask-harder-to-match-than-ocarina-of-time">Why is Majora's Mask harder to match than Ocarina of Time?</h3>
+                    <p>Majora's Mask is compiled with <code>-O2 -g3</code>. <code>-g3</code> is a debugging flag that includes far more debugging information than just <code>-O2</code>, but also changes how the compiled code looks. <code>-g3</code> is also more sensitive to the scope in which variables are declared, so it is harder to produce matching code; Ocarina of Time debug is more flexible here. However, retail versions of Ocarina of Time are also compiled with <code>-O2 -g3</code>, so it too will have this problem when that project moves to supporting retail versions.</p>
                     <h3 id="why-is-there-no-assembly-code-in-mms-repo-what-is-transient-asm">Why is there no assembly code in the Majora's Mask repo? What is transient ASM?</h3>
                     <p>It is the view of the Majora's Mask project leads that transient asm is safer than storing the disassembly in the repo. They feel that the C code is more transformative than a straight disassembly.</p>
                     <p>This does require a more sophisticated way of dealing with the code (find/replace for renaming things must be replaced by a script and dictionary, data must be handled with more care, etc.), but it also produces a much cleaner codebase while the project is still in progress.</p>

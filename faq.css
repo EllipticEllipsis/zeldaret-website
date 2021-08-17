@@ -6,7 +6,7 @@ p, li {
 }
 
 h3:not(:first-child), h4:not(:first-child) {
-    margin-top: 2rem;
+    margin-top: calc(2rem * var(--scaling-factor));
 }
 
 h3 {

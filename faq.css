@@ -1,6 +1,6 @@
 p, li {
-    opacity: 87%;
-    text-shadow: 0px 0px .2em black;
+    /* opacity: 87%;
+    text-shadow: 0px 0px .2em black; */
     line-height: calc(1.3rem * var(--scaling-factor));
     font-size: medium;
 }

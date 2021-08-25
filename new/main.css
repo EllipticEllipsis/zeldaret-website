@@ -389,7 +389,7 @@ main {
   width: 100%;
   margin: calc(30px*var(--scaling-factor)) auto;
   
-  border: calc(1px*var(--scaling-factor)) solid red;
+  /* border: calc(1px*var(--scaling-factor)) solid red; */
  
 }
 
@@ -402,16 +402,79 @@ main {
   width: 80%;
       margin: 0 auto;
       
-      border: calc(1px*var(--scaling-factor)) solid blue;
+      /* border: calc(1px*var(--scaling-factor)) solid blue; */
      
 }
+
+
+.main-nav {
+    z-index: 10;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    min-height: 56px;
+    flex-direction: row;
+    background: var(--zelda-bg);
+    font-size: 20px;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    font-weight: bold;
 }
+
+.left > label {
+  display: none;
+}
+nav input {
+  display: none;
+}
+
+.nav-content {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-height: inherit;
+  /* overflow: hidden; */
+  /* padding: 0 0 0 50px; */
+}
+
+.left {
+  flex: 0;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+
+.middle {
+  flex: unset;
+  text-align: center;
+}
+
+.right {
+  text-align: center;
+}
+
+.logo {
+  width: 55px;
+  height: 50px;
+  padding-left: 5px;
+}
+
+.item {
+  font-size: 20px;
+  padding: 16px;
+  display: inline-block;
+}
+
+}
+
 @media only screen and (min-width: 1000px) {
 main {
   width: 60%;
       margin: 0 auto;
       
-      border: calc(1px*var(--scaling-factor)) solid red;
+      /* border: calc(1px*var(--scaling-factor)) solid red; */
      
 }
 }
@@ -420,7 +483,7 @@ main {
   width: 40%;
       margin: 0 auto;
       
-      border: calc(1px*var(--scaling-factor)) solid blue;
+      /* border: calc(1px*var(--scaling-factor)) solid blue; */
      
 }
 }

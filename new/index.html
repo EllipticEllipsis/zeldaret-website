@@ -13,55 +13,122 @@
 
 <body>
     <nav class="main-nav">
+        <input type="checkbox" id="menu">
         <div class="left">
           <img class="logo" src="../img/logo.png" />
+          <div class="item">ZeldaRET</div>
+          <label for="menu">Menu</label>
         </div>
-        <div class="middle">
-          <a class="item" href="index.html">Index</a>
-          <a class="item" href="progress.html">Progress</a>
-          <a class="item" href="faq.html">FAQ</a>
-        </div>
-        <div class="right">
-            <a class="item" href="https://discord.zelda64.dev">Discord</a>
+        <div class="nav-content">
+            <div class="middle">
+              <a class="item" href="index.html">Index</a>
+              <a class="item" href="progress.html">Progress</a>
+              <a class="item" href="faq.html">FAQ</a>
+            </div>
+            <div class="right">
+                <a class="item" href="https://discord.zelda64.dev">Discord</a>
+            </div>
         </div>
     </nav>
 
-    <div class="title">
+    <header class="title">
         <img src="../img/logo.png" style="width: 200px; height: 200px" />
 
         <h1>Zelda Reverse Engineering Team</h1>
-    </div>
+    </header>
+
+    <main>
 
     <article>
-        <h2>Stuff</h2>
+        <h2>Main links</h2>
         <section>
-            <div>Content</div>
-            <div>Some more content</div>
+            <div class="external-link-img">
+                <a href="https://discord.zelda64.dev"><img src="img/logo-discord.png" alt="Discord Link" width="24" style="margin-right: 6px;">Discord</a>
+            </div>
+            <div class="external-link-img">
+                <a href="https://github.com/zeldaret/"><img src="img/logo-github.png" alt="GitHub Link" width="24" style="margin-right: 6px;">GitHub</a>
+            </div>
         </section>
+    </article>
+<!-- 
+    <article>
+        <h2>Development</h2>
         <section>
-            <div>Content</div>
-            <div>Some more content</div>
+            <div class="external-link-img">
+                <a href="progress.html"><img src="img/logo-progress.png" alt="Progress Link" width="24" width="24" style="margin-right: 6px;">Progress Page</a>
+            </div>
+            <div class="external-link-img">
+                <a href="https://trello.com/b/qUqnUkWY/ocarina-of-time-decompilation"><img src="img/logo-trello.png" alt="Trello Link" width="24" width="24" style="margin-right: 6px;">OOT Trello</a>
+            </div>
+            <div class="external-link-img">
+                <a href="https://trello.com/b/ruxw9n6m/majoras-mask-decompilation"><img src="img/logo-trello.png" alt="Trello Link" width="24" width="24" style="margin-right: 6px;">MM Trello</a>
+            </div>
+
+        </section>
+    </article> 
+-->
+
+    <article>
+        <h2>Ocarina of Time</h2>
+        <section>
+            <div>
+                <a href="https://github.com/zeldaret/oot">GitHub repository</a>
+            </div>
+            <div>
+                <a href="https://trello.com/b/qUqnUkWY/ocarina-of-time-decompilation">Trello</a>
+            </div>
+            <div>
+                <a href="https://github.com/zeldaret/oot/blob/master/docs/tutorial/contents.md">Introduction and tutorial for Zelda64 decomp</a>
+            </div>
+        </section>
+    </article>
+    
+    <article>
+        <h2>Majora's Mask</h2>
+        <section>
+            <div>
+                <a href="https://github.com/zeldaret/mm">GitHub repository</a>
+            </div>
+            <div>
+                <a href="https://trello.com/b/ruxw9n6m/majoras-mask-decompilation">Trello</a>
+            </div>
+        </section>
+    </article>
+    
+    <article>
+        <h2>Minish Cap</h2>
+        <section>
+            <div>
+                <a href="https://github.com/zeldaret/tmc">GitHub repository</a>
+            </div>
         </section>
     </article>
 
     <article>
-        <h2>Very Long Title About Very Specific Stuff That Takes Up a Lot of Space and Probably Breaks Stuff</h2>
+        <h2>Breath of the Wild</h2>
         <section>
-            <div>Content</div>
-            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lobortis consectetur pharetra. Morbi euismod libero nunc, quis tincidunt lectus facilisis a. Integer eu mollis est, et euismod erat. Vivamus molestie, est in tincidunt condimentum, odio quam semper nisi, non efficitur purus purus quis leo. Morbi at iaculis mi, euismod scelerisque elit. Sed eu lorem ipsum. Nullam ultrices, lorem id lacinia iaculis, urna risus tincidunt quam, eu consequat sapien odio sit amet nunc. Nullam tempor tristique libero id imperdiet. Vestibulum eleifend ligula sed elit tristique euismod. Aenean nec orci non ante sollicitudin mollis sit amet id lorem. </div>
-            <div>Some more content</div>
+            <div>
+                <a href="https://github.com/zeldaret/botw">GitHub repository</a>
+            </div>
+            <div>
+                <a href="https://botw.link/progress">Progress</a>
+            </div>
+            <div>
+                <a href="https://github.com/zeldaret/botw/blob/master/README.md">README and FAQ</a>
+            </div>
         </section>
     </article>
 
     <article>
-        <h2>Other Stuff</h2>
+        <h2>Twilight Princess</h2>
         <section>
-            <div>Content</div>
-            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lobortis consectetur pharetra. Morbi euismod libero nunc, quis tincidunt lectus facilisis a. Integer eu mollis est, et euismod erat. Vivamus molestie, est in tincidunt condimentum, odio quam semper nisi, non efficitur purus purus quis leo. Morbi at iaculis mi, euismod scelerisque elit. Sed eu lorem ipsum. Nullam ultrices, lorem id lacinia iaculis, urna risus tincidunt quam, eu consequat sapien odio sit amet nunc. Nullam tempor tristique libero id imperdiet. Vestibulum eleifend ligula sed elit tristique euismod. Aenean nec orci non ante sollicitudin mollis sit amet id lorem. </div>
-            <div>Some more content</div>
+            <div>
+                <a href="https://github.com/zeldaret/tp">GitHub repository</a>
+            </div>
         </section>
     </article>
 
+</main>
 </body>
 
 </html>

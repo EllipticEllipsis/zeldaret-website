@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ZeldaRET — Progress</title>
+    <meta name="description" content="Progress of the projects">
+    <meta name="author" content="ZeldaRET">
+
+    <link rel="stylesheet" href="main.css">
+
+    <script type="text/javascript" src="https://code.highcharts.com/highcharts.js"></script>
+    <script type="text/javascript" src="https://code.highcharts.com/modules/data.js"></script>
+    <script type="text/javascript" src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script type="text/javascript" src="progress.js"></script>
+
+</head>
+
+<body>
+    <nav class="main-nav">
+        <div class="left">
+          <img class="logo" src="../img/logo.png" />
+        </div>
+        <div class="middle">
+          <a class="item" href="index.html">Index</a>
+          <a class="item" href="progress.html">Progress</a>
+          <a class="item" href="faq.html">FAQ</a>
+        </div>
+        <div class="right">
+            <a class="item" href="https://discord.zelda64.dev">Discord</a>
+        </div>
+    </nav>
+
+    <div class="title">
+        <img src="../img/logo.png" style="width: 200px; height: 200px" />
+
+        <h1>Zelda Reverse Engineering Team</h1>
+    </div>
+
+    <article class="progress-box">
+        <h2>OoT MQ Debug</h2>
+        <section>
+            <dl class="progress-container">
+                <dt>Last Change</dt>
+                <dd id="ootLastChange" class="progress-value" style="color: cyan;">Error</dd>
+            </dl>
+            <hr>
+            <dl class="progress-container">
+                <dt>Total</dt>
+                <dd id="ootTotalPercent" class="progress-value">Error</dd>
+                <dt>Boot</dt>
+                <dd id="ootBootPercent" class="progress-value">Error</dd>
+                <dt>Code</dt>
+                <dd id="ootCodePercent" class="progress-value">Error</dd>
+                <dt>Overlays</dt>
+                <dd id="ootOverlayPercent" class="progress-value">Error</dd>
+            </dl>
+            </div>
+
+        </section>
+        <section>
+            <div>
+                <div id="ootProgressChart" class="chart"></div>
+                <script type="text/javascript" src="chart_oot.js"></script>
+            </div>
+            
+        </section>
+        <!-- <section> -->
+            <div class="progress-toggle" id="ootToggleMatching">
+                <span>Matching:</span> 
+                <span style="color:red">No</span>
+            </div>
+        <!-- </section> -->
+    </article>
+
+    <article>
+        <h2>Very Long Title About Very Specific Stuff That Takes Up a Lot of Space and Probably Breaks Stuff</h2>
+        <section>
+            <div>Content</div>
+            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lobortis consectetur pharetra. Morbi euismod libero nunc, quis tincidunt lectus facilisis a. Integer eu mollis est, et euismod erat. Vivamus molestie, est in tincidunt condimentum, odio quam semper nisi, non efficitur purus purus quis leo. Morbi at iaculis mi, euismod scelerisque elit. Sed eu lorem ipsum. Nullam ultrices, lorem id lacinia iaculis, urna risus tincidunt quam, eu consequat sapien odio sit amet nunc. Nullam tempor tristique libero id imperdiet. Vestibulum eleifend ligula sed elit tristique euismod. Aenean nec orci non ante sollicitudin mollis sit amet id lorem. </div>
+            <div>Some more content</div>
+        </section>
+    </article>
+
+    <article>
+        <h2>Other Stuff</h2>
+        <section>
+            <div>Content</div>
+            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lobortis consectetur pharetra. Morbi euismod libero nunc, quis tincidunt lectus facilisis a. Integer eu mollis est, et euismod erat. Vivamus molestie, est in tincidunt condimentum, odio quam semper nisi, non efficitur purus purus quis leo. Morbi at iaculis mi, euismod scelerisque elit. Sed eu lorem ipsum. Nullam ultrices, lorem id lacinia iaculis, urna risus tincidunt quam, eu consequat sapien odio sit amet nunc. Nullam tempor tristique libero id imperdiet. Vestibulum eleifend ligula sed elit tristique euismod. Aenean nec orci non ante sollicitudin mollis sit amet id lorem. </div>
+            <div>Some more content</div>
+        </section>
+    </article>
+
+</body>
+
+</html>

@@ -19,27 +19,36 @@
 
 <body>
     <nav class="main-nav">
+        <input type="checkbox" id="menu">
         <div class="left">
           <img class="logo" src="../img/logo.png" />
+          <div class="item">ZeldaRET</div>
+          <label for="menu">Menu</label>
         </div>
-        <div class="middle">
-          <a class="item" href="index.html">Index</a>
-          <a class="item" href="progress.html">Progress</a>
-          <a class="item" href="faq.html">FAQ</a>
-        </div>
-        <div class="right">
-            <a class="item" href="https://discord.zelda64.dev">Discord</a>
+        <div class="nav-content">
+            <div class="middle">
+              <a class="item" href="index.html">Index</a>
+              <a class="item" href="progress.html">Progress</a>
+              <a class="item" href="faq.html">FAQ</a>
+            </div>
+            <div class="right">
+                <a class="item" href="https://discord.zelda64.dev">Discord</a>
+            </div>
         </div>
     </nav>
 
-    <div class="title">
+
+    <header class="title">
         <img src="../img/logo.png" style="width: 200px; height: 200px" />
 
         <h1>Zelda Reverse Engineering Team</h1>
-    </div>
+    </header>
+
+
+    <main>
 
     <article class="progress-box">
-        <h2>OoT MQ Debug</h2>
+        <h2 id="oot-mq-debug">Ocarina of Time Master Quest Debug</h2>
         <section>
             <dl class="progress-container">
                 <dt>Last Change</dt>
@@ -47,14 +56,10 @@
             </dl>
             <hr>
             <dl class="progress-container">
-                <dt>Total</dt>
-                <dd id="ootTotalPercent" class="progress-value">Error</dd>
-                <dt>Boot</dt>
-                <dd id="ootBootPercent" class="progress-value">Error</dd>
-                <dt>Code</dt>
-                <dd id="ootCodePercent" class="progress-value">Error</dd>
-                <dt>Overlays</dt>
-                <dd id="ootOverlayPercent" class="progress-value">Error</dd>
+                <dt>Total</dt><dd id="ootTotalPercent" class="progress-value">Error</dd>
+                <dt>Boot</dt><dd id="ootBootPercent" class="progress-value">Error</dd>
+                <dt>Code</dt><dd id="ootCodePercent" class="progress-value">Error</dd>
+                <dt>Overlays</dt><dd id="ootOverlayPercent" class="progress-value">Error</dd>
             </dl>
             </div>
 
@@ -74,23 +79,89 @@
         <!-- </section> -->
     </article>
 
-    <article>
-        <h2>Very Long Title About Very Specific Stuff That Takes Up a Lot of Space and Probably Breaks Stuff</h2>
+    <article class="progress-box">
+        <h2 id="mm-usa">Majora's Mask USA</h2>
         <section>
-            <div>Content</div>
-            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lobortis consectetur pharetra. Morbi euismod libero nunc, quis tincidunt lectus facilisis a. Integer eu mollis est, et euismod erat. Vivamus molestie, est in tincidunt condimentum, odio quam semper nisi, non efficitur purus purus quis leo. Morbi at iaculis mi, euismod scelerisque elit. Sed eu lorem ipsum. Nullam ultrices, lorem id lacinia iaculis, urna risus tincidunt quam, eu consequat sapien odio sit amet nunc. Nullam tempor tristique libero id imperdiet. Vestibulum eleifend ligula sed elit tristique euismod. Aenean nec orci non ante sollicitudin mollis sit amet id lorem. </div>
-            <div>Some more content</div>
+            <dl class="progress-container">
+                <dt>Last Change</dt>
+                <dd id="mmLastChange" class="progress-value" style="color: cyan;">Error</dd>
+            </dl>
+            <hr>
+            <dl class="progress-container">
+                <dt>Total</dt><dd id="mmTotalPercent" class="progress-value">Error</dd>
+                <dt>Boot</dt><dd id="mmBootPercent" class="progress-value">Error</dd>
+                <dt>Code</dt><dd id="mmCodePercent" class="progress-value">Error</dd>
+                <dt>Overlays</dt><dd id="mmOverlayPercent" class="progress-value">Error</dd>
+            </dl>
+            </div>
+
         </section>
+        <section>
+            <div>
+                <div id="mmProgressChart" class="chart"></div>
+                <!-- <script type="text/javascript" src="chart_mm.js"></script> -->
+            </div>
+        </section>
+
+        <section>
+            <dl class="progress-container">
+                <dt>Assets</dt><dd id="mmAssetsTotalPercent" class="progress-value">Error</dd>
+                <dt>Audio</dt><dd id="mmAssetsAudioPercent" class="progress-value">Error</dd>
+                <dt>Miscellaneous</dt><dd id="mmAssetsMiscPercent" class="progress-value">Error</dd>
+                <dt>Objects</dt><dd id="mmAssetsObjectPercent" class="progress-value">Error</dd>
+                <dt>Scenes</dt><dd id="mmAssetsScenePercent" class="progress-value">Error</dd>
+                <dt>Textures</dt><dd id="mmAssetsTexturePercent" class="progress-value">Error</dd>
+                
+            </dl>
+            </div>
+
+        </section>
+        <section>
+            <div>
+                <div id="mmAssetProgressChart" class="chart"></div>
+                <script type="text/javascript" src="chart_mm.js"></script>
+            </div>
+        </section>
+
+        <!-- <section> -->
+            <div class="progress-toggle" id="mmToggleMatching">
+                <span>Matching:</span> 
+                <span style="color:red">No</span>
+            </div>
+        <!-- </section> -->
     </article>
 
-    <article>
-        <h2>Other Stuff</h2>
+    <article class="progress-box">
+        <h2 id="tmc-usa">The Minish Cap USA</h2>
         <section>
-            <div>Content</div>
-            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lobortis consectetur pharetra. Morbi euismod libero nunc, quis tincidunt lectus facilisis a. Integer eu mollis est, et euismod erat. Vivamus molestie, est in tincidunt condimentum, odio quam semper nisi, non efficitur purus purus quis leo. Morbi at iaculis mi, euismod scelerisque elit. Sed eu lorem ipsum. Nullam ultrices, lorem id lacinia iaculis, urna risus tincidunt quam, eu consequat sapien odio sit amet nunc. Nullam tempor tristique libero id imperdiet. Vestibulum eleifend ligula sed elit tristique euismod. Aenean nec orci non ante sollicitudin mollis sit amet id lorem. </div>
-            <div>Some more content</div>
+            <dl class="progress-container">
+                <dt>Last Change</dt>
+                <dd id="tmcLastChange" class="progress-value" style="color: cyan;">Error</dd>
+            </dl>
+            <hr>
+            <dl class="progress-container">
+                <dt>Code</dt><dd id="tmcCodePercent" class="progress-value">Error</dd>
+                <dt>Data</dt><dd id="tmcDataPercent" class="progress-value">Error</dd>
+            </dl>
+            </div>
+
         </section>
+        <section>
+            <div>
+                <div id="tmcProgressChart" class="chart"></div>
+                <script type="text/javascript" src="chart_tmc.js"></script>
+            </div>
+            
+        </section>
+        <!-- <section> -->
+            <div class="progress-toggle" id="tmcToggleMatching">
+                <span>Matching:</span> 
+                <span style="color:red">No</span>
+            </div>
+        <!-- </section> -->
     </article>
+
+    </main>
 
 </body>
 

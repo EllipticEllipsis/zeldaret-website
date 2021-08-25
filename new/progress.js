@@ -100,6 +100,8 @@ function ProgressChart(chartElementId, matchingToggleElementId, title, subtitle,
 	this.chart = Highcharts.chart(this.chartElementId, this.chartOptions);
 	this.chart.owner = this;
 	
-	let progressChart = this;
-	document.getElementById(this.matchingToggleElementId).onclick = function () { progressChart.toggleMatching(); };
+	if ( !!this.matchingToggleElementId ) {
+		let progressChart = this;
+		document.getElementById(this.matchingToggleElementId).onclick = function () { progressChart.toggleMatching(); };
+	};
 }

@@ -25,3 +25,16 @@
 a[mat-icon-button] {
   margin-left: auto;
 }
+
+:host {
+  background: transparent;
+}
+
+.mat-toolbar {
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(21px);
+  -webkit-backdrop-filter: blur(21px);
+  position: fixed;
+  top: 0px;
+}

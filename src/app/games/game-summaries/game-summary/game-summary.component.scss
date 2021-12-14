@@ -10,3 +10,17 @@ img[mat-card-avatar] {
 mat-card-actions {
   text-align: center;
 }
+
+mat-card {
+  // background: lightgray;
+  // background: rgba(0, 0, 0, 0.7);
+  
+  background: rgba(48, 25, 52, 0.7);
+  backdrop-filter: blur(21px);
+  -webkit-backdrop-filter: blur(21px);
+}
+
+mat-card * {
+
+  color: white;
+}
